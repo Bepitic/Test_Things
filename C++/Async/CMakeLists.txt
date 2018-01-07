@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+project(Async_Test)
+set(DIRECTORIOS src include)
+file(GLOB SOURCES *.hpp	*.h *.cpp include/*.h src/*.cpp )
+include_directories(${DIRECTORIOS})
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+add_executable(Async_Test ${SOURCES})
